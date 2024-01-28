@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Messages</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Messages</h1>
+    <p>Welcome to <%= title %></p>
+    <% messages.forEach(message => { %>
+      <p>user: <%= message.user %></p>
+      <p>text: <%= message.text %></p>
+      <p>added: <%= message.added %></p>
+      <%})%>
+
+      <form method='POST' action="/home">
+        <button>Add a new message</button>
+      </form>
+  </body>
+</html>
